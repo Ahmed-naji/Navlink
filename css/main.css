@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 10px 20px;
+  scroll-behavior: smooth;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  padding: 10px;
+  background: #f7f7f7;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.myBody {
+    width: 100%;
+    height: 100vh;
+    padding-top: 10vh;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+li a {
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #000;
+  transition: 1s all;
+}
+li a:hover {
+  color: #000;
+  background: #fff;
+}
+
+.but{
+    display: none;
+}
+
+.hidden {
+display: none !important;
+}
+@media screen and (max-width: 500px) {
+    .but{
+        display: block;
+        padding: 10px;
+        background: #fff;
+        border-radius: 10px;
+        cursor: pointer;
+
+    }
+  .is {
+    display: none !important;
+  }
+
+  ul {
+    flex-direction: column;
+    width: 100%;
+    height: min-content;
+    flex-shrink: 0;
+  }
+  li {
+    width: 100%;
+  }
+
+  li a {
+    margin: 3px;
+    display: block;
+    border-radius: 2px;
+  }
+
+  ul {
+    width: 100%;
+    height: min-content;
+    padding: 10px;
+    background: rgba(0, 0, 5, 0.26);
+    border-radius: 0 0 20px 20px;
+    transition: 1s all;
+    animation: 1s identifier ease;
+  }
+  .openMoue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 9vh !important;
+    height: 100vh;
+    background: #0000004a;
+    backdrop-filter: blur(10px);
+  }
+
+  @keyframes identifier {
+    0% {
+      transform: translateY(-200px);
+    }
+  }
+}
